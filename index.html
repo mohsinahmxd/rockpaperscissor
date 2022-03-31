@@ -1,0 +1,39 @@
+<script>
+    function computerPlay () {
+        let x = Math.floor((Math.random() * 3) + 1); // random number between 1 and 3
+        if (x == 1) {
+            return "Rock"
+        } else if (x == 2) {
+            return "Paper"
+        } else 
+            return "Scissor"
+
+    }
+
+    // const botChoice = computerPlay(); - returns the value that the function outputted and stores it in botChoice 
+    // console.log(botChoice);
+
+    function playRound (computerSelection, playerSelection) {
+        if (computerSelection == "Rock" && playerSelection == "Scissor") {
+            console.log('You lose, Rock beats Paper')
+        }
+
+    }
+
+    function game () {
+        for (let i = 1; i < 6; i++) { // five rounds 
+            playRound(computerPlay(), "Scissor");
+            console.log(`Game ${i}`)
+        }
+    }
+
+    game();
+
+    // need to add the rest of the possibilites, add user input and do input checking like case sensitive or numbers 
+    
+
+
+
+
+
+</script>
