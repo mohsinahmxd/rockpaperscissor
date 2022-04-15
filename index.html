@@ -1,4 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../rockpaperscissor/style.css">
+    <title>Rock paper scissors</title>
+</head>
+<body>
+
+    <div class="button-container">
+        <button class="rock" type="button">Rock</button>
+        <button class="paper" type="button">Paper</button>
+        <button class="scissor" type="button">Scissors</button>
+    </div>
+
+
+</body>
+</html>
+
+
 <script>
+
+    const rock = document.querySelector('button.rock');
+    const paper = document.querySelector('button.paper');
+    const scissor = document.querySelector('button.scissor');
+
+    rock.addEventListener('click', () => { // I write it like this so the playerSelection function is only called until after a click ie once the button is clicked the anonymous arrow function is called followed by the playerSelection function once the click happens. This is how you should pass arguments in situations like this. 
+        playerSelection('Rock');
+    });
+
+    paper.addEventListener('click', () => {
+        playerSelection('Paper');
+    });
+
+    scissor.addEventListener('click', () => {
+        playerSelection('Scissor');
+    })
+
+
     function computerPlay () {
         let x = Math.floor((Math.random() * 3) + 1); // random number between 1 and 3
         if (x == 1) {
@@ -10,29 +50,48 @@
 
     }
 
-    // const botChoice = computerPlay(); - returns the value that the function outputted and stores it in botChoice 
-    // console.log(botChoice);
+    function playerSelection(selection) {
+        return selection
+    }
 
     function playRound (computerSelection, playerSelection) {
-        if (computerSelection == "Rock" && playerSelection == "Scissor") {
-            console.log('You lose, Rock beats Paper')
+        if (computerSelection == "Rock" && playerSelection == "Rock") {
+            console.log('Tie, Rock v Rock')
+        } else if (computerSelection == "Rock" && playerSelection == "Paper") {
+            console.log('You win, Paper beats Rock')
+        } else if (computerSelection == "Rock" && playerSelection == "Scissor") {
+            console.log('You lose, Rock beats Scissor')
+        } else if (computerSelection == "Paper" && playerSelection == "Rock") {
+            console.log('You lose, Paper beats rock')
+        } else if (computerSelection == "Paper" && playerSelection == "Paper") {
+            console.log('Paper v Paper')
+        } else if (computerSelection == "Paper" && playerSelection == "Scissor") {
+            console.log('You win, Scissor beats Paper')
+        } else if (computerSelection == "Scissor" && playerSelection == "Rock") {
+            console.log('You win, Rock beats Scissor')
+        } else if (computerSelection == "Scissor" && playerSelection == "Paper") {
+            console.log('You lose, Scissor beats Paper')
+        } else if (computerSelection == "Scissor" && playerSelection == "Scissor") {
+            console.log('Tie, Scissor v Scissor')
         }
-
     }
 
-    function game () {
-        for (let i = 1; i < 6; i++) { // five rounds 
-            playRound(computerPlay(), "Scissor");
-            console.log(`Game ${i}`)
-        }
-    }
+    // function game () {
+    //     playRound(computerPlay(), playerSelection());
+    //     console.log(`Game ${i}`)
+    // }
 
-    game();
+    // game();
 
-    // need to add the rest of the possibilites, add user input and do input checking like case sensitive or numbers 
+    // add user input and do input checking like case sensitive or numbers 
     
 
+    // for (let i = 1; i < 6; i++) { // five rounds 
+    //         playRound(computerPlay(), "Scissor");
+    //         console.log(`Game ${i}`)
+    //     }
 
+    // what i need to do now is implement the gane function and make it work when a option is clicked and display score, round number and dark mode 
 
 
 
