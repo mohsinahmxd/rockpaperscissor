@@ -16,13 +16,17 @@ button:hover {
 
 body {
     display:  flex;
-    justify-content: center;
-    align-items: center;
     height: 500px;
+    flex-direction: column;
+    align-items: center;
     
 }
 
 button-container {
     display: flex;
     justify-content: space-between;
+}
+
+h1 {
+    color: white;
 }
