@@ -10,9 +10,9 @@
 <body>
 
     <div class="round-score-info">
-        <h1>Round number: 1</h1>
-        <h1>My Score: </h1> <!-- First to five points takes a round -->
-        <h1>Computer Score: </h1> <!-- First to five points takes a round -->
+        <h1 class="round-number">Round number: 1</h1>
+        <h1 class="user-score">My Score: 0</h1> <!-- First to five points takes a round -->
+        <h1 class="computer-score">Computer Score: 0</h1> <!-- First to five points takes a round -->
     </div>
 
     <div class="button-container">
@@ -27,10 +27,22 @@
 
 
 <script>
-
+    var roundscoreinfo = document.querySelector('.round-score-info')
+    console.log(roundscoreinfo.innerHTML)
+    
     const rock = document.querySelector('button.rock');
     const paper = document.querySelector('button.paper');
     const scissor = document.querySelector('button.scissor');
+
+    // var roundnumber = document.querySelector('h1.round-number').innerText;
+    // var userscore = document.querySelector('h1.user-score').innerText;
+    // var computerscore = document.querySelector('h1.computer-score').innerText;
+
+    // console.log(roundnumber)
+    // console.log(userscore)
+    // console.log(computerscore)
+
+    var userscore = 0
 
     let playerSelection = undefined
 
@@ -67,6 +79,16 @@
     function playRound (computerSelection, playerSelection) {
         if (computerSelection == "Rock" && playerSelection == "Rock") {
             console.log('Tie, Rock v Rock')
+
+            userscore ++
+            roundscoreinfo.innerHTML = `
+            
+                <h1 class="round-number">Round number: 1</h1>
+                <h1 class="user-score">My Score: ${userscore}</h1>
+                <h1 class="computer-score">Computer Score: 0</h1> 
+            
+            `
+
         } else if (computerSelection == "Rock" && playerSelection == "Paper") {
             console.log('You win, Paper beats Rock')
         } else if (computerSelection == "Rock" && playerSelection == "Scissor") {
