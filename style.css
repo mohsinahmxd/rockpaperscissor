@@ -3,7 +3,7 @@ button {
     background-color: white;
     color: black;
     margin: 5px;
-    width: 100px;
+    width: 120px;
 }
 
 button:hover {
@@ -11,7 +11,7 @@ button:hover {
 }
 
 * {
-    background-color: black;
+    font-family: 'Merienda';font-size: 22px;
 }
 
 body {
@@ -28,5 +28,13 @@ button-container {
 }
 
 h1 {
-    color: white;
+    color: black;
+}
+
+h3 {
+    color: black;
+}
+
+.game-output {
+    margin-top: 20px;
 }
