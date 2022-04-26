@@ -2,8 +2,8 @@ button {
     padding: 10px;
     background-color: white;
     color: black;
-    margin: 5px;
     width: 120px;
+
 }
 
 button:hover {
@@ -11,7 +11,8 @@ button:hover {
 }
 
 * {
-    font-family: 'Merienda';font-size: 22px;
+    font-family: 'Merienda';font-size: 16px;
+    /* background-color: black !important; dark mode  */
 }
 
 body {
@@ -19,12 +20,12 @@ body {
     height: 500px;
     flex-direction: column;
     align-items: center;
-    
 }
 
-button-container {
+.button-container {
     display: flex;
     justify-content: space-between;
+    width: 400px;
 }
 
 h1 {
@@ -37,4 +38,29 @@ h3 {
 
 .game-output {
     margin-top: 20px;
+}
+
+.round-score-info {
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.dark-mode-btn-container {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    margin-top: 10px;
+    margin-right: 20px;
+}
+
+.btn {
+    width: 40px;
+    background-color: red !important;
+    font-size: 10px !important;
+    
+}
+
+.dark-mode-text {
+    margin-top: 3px;
+    margin-right: 9px;
 }
