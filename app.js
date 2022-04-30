@@ -11,6 +11,8 @@ var computerscore = 0
 
 let playerSelection = undefined
 
+const modeSwitch = document.querySelector('#darkmode');
+
 rock.addEventListener('click', () => {
     game("Rock");    
 // I write it like this so the playerSelection function is only called until after a click ie once the button is clicked the anonymous arrow function is called followed by the playerSelection function once the click happens. This is how you should pass arguments in situations like this. 
@@ -23,6 +25,14 @@ paper.addEventListener('click', () => {
 scissor.addEventListener('click', () => {
     game("Scissor");  
 });
+
+modeSwitch.addEventListener('click', () => {
+    darkmode();
+});
+
+function darkmode () {
+    console.log('hello')
+}
 
 function computerPlay () {
     let x = Math.floor((Math.random() * 3) + 1); // random number between 1 and 3
