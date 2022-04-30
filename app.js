@@ -31,7 +31,11 @@ modeSwitch.addEventListener('click', () => {
 });
 
 function darkmode () {
-    console.log('hello')
+    if (modeSwitch.checked == true) {
+        console.log('on')
+    } else {
+        console.log('off')
+    }
 }
 
 function computerPlay () {

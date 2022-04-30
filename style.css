@@ -12,7 +12,7 @@ button:hover {
 
 * {
     font-family: 'Merienda';font-size: 16px;
-    /* background-color: black !important; dark mode  */
+    /* background-color: black !important; */
 }
 
 body {
@@ -52,20 +52,6 @@ h3 {
     margin-top: 10px;
     margin-right: 20px;
 }
-
-/*
-
-.btn {
-    width: 40px;
-    background-color: red !important;
-    font-size: 10px !important;
-    
-} 
-
-.dark-mode-text {
-    margin-top: 3px;
-    margin-right: 9px;
-} */
 
 .switch {
     display: inline-block;
