@@ -33,8 +33,12 @@ modeSwitch.addEventListener('click', () => {
 function darkmode () {
     if (modeSwitch.checked == true) {
         console.log('on')
+        document.querySelector('body').style.backgroundColor = "black"
+        document.querySelector('body').style.color = "white"
     } else {
         console.log('off')
+        document.querySelector('body').style.backgroundColor = "white"
+        document.querySelector('body').style.color = "black"
     }
 }
 
