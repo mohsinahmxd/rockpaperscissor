@@ -85,7 +85,7 @@ function roundWin (computerSelection, playerSelection) {
     
         <h3> You chose ${playerSelection} </h3>
         <h3> Computer chose ${computerSelection} </h3>
-        <h3> You loose &#x1F92C </h3>
+        <h3> You win &#x1F920 </h3>
         `
     }
 }
@@ -109,7 +109,7 @@ function roundTie (computerSelection, playerSelection) {
     
         <h3> You chose ${playerSelection} </h3>
         <h3> Computer chose ${computerSelection} </h3>
-        <h3> You loose &#x1F92C </h3>
+        <h3> Tie &#x1F937 </h3>
 
         `
     }
